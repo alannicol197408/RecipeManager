@@ -1,0 +1,25 @@
+python3 -m venv myvenv
+
+pip install --upgrade pip
+
+django-admin.py startproject mysite
+
+mysite/settings.py
+TIME_ZONE = 'Europe/Berlin'
+
+mysite/settings.py
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+mysite/settings.py
+ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+
+mysite/settings.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+python manage.py migrate
